@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.head_box{
+    width: 100%;
+    height: 50px;
+}
+.logo{
+    width: 100px;
+    height: 50px;
+    margin-left: 150px;
+}
+.logo img{
+    height:80%;
+    padding-top: 5px;
+}
+.head_up{
+    width:100%;
+    height: 50px;
+}
+.head_up ul{
+    width:300px;
+    height: 50px;
+    margin-left:210px;
+    margin-top: -50px;
+}
+.head_up ul a{
+    width:70px;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+}
+.head_up ul a li{
+    width:70px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.head_content{
+    position: absolute;
+    display: none;
+    top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.head_content{
+    position: absolute;
+    display: none;
+    top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.footer_box{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(29, 29, 29);
+}
+.footer_box p{
+    margin-top:5px ;
+    margin-left: 100px;
+    font-size: 15px;
+    color: white;
+}
+.footer_box p:nth-of-type(1){
+    padding-top:20px ;
+}
+.footer_box ul{
+    margin-left: 80px;
+    margin-top: 5px;
+}
+.footer_box ul li{
+    float: left;
+    font-size: 15px;
+    color: white;
+    margin-left: 20px;
+}
+.body_box{
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: rgb(241, 241, 241);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.body_box .up_box{
+    background-color: white;
+    margin-left: 100px;
+    width: 85%;
+    height: 210px;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 0 3px rgb(182, 182, 182);
+}
+.img_box{
+    width:300px;
+    height: 180px;
+    overflow: hidden;
+    position: absolute;
+    top:15px;
+    left: 15px;
+}
+.img_box img{
+    width: 100%;
+}
+.up_box h3{
+    position: absolute;
+    top:15px;
+    left: 340px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.up_box span:nth-of-type(1){
+    position: absolute;
+    top:40px;
+    left: 340px;
+    color: grey;
+}
+.up_box span:nth-of-type(2){
+    position: absolute;
+    top:60px;
+    left: 340px;
+    color: grey;
+}
+.up_box span:nth-of-type(3){
+    position: absolute;
+    top:80px;
+    left: 340px;
+    color: grey;
+}
+.up_box span:nth-of-type(4){
+    position: absolute;
+    top:100px;
+    left: 340px;
+    color: grey;
+}
+.up_box span:nth-of-type(5){
+    position: absolute;
+    top:140px;
+    left: 340px;
+    color: grey;
+}
+.up_box span:nth-of-type(6){
+    position: absolute;
+    top:140px;
+    left: 440px;
+    color: grey;
+}
+.layui-icon {
+    font-size: 15px;
+}
+.layui-icon-group{
+    color: rgb(43, 179, 104);
+}
+.layui-icon-reply-fill{
+    color: rgb(243, 222, 33);
+}
+.body_box .down_box{
+    background-color: white;
+    margin-left: 100px;
+    width: 85%;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 0 3px rgb(182, 182, 182);
+}
+.layui-tab-item:nth-of-type(1){
+    color: grey;
+    padding: 0 30px;
+    padding-top: 10px;
+    font-size: 15px;
+    text-indent: 2em;
+}
+.layui-tab-item:nth-of-type(2){
+    padding: 0 30px;
+    padding-top: 10px;
+}
+.layui-tab-brief>.layui-tab-title .layui-this {
+    color: rgb(42, 111, 240);
+}
+.layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid rgb(42, 111, 240);
+}
+.layui-input-block {
+    margin-left: 0px;
+    width: 15%;
+}
+.layui-input.layui-unselect{
+    height: 30px;
+
+}
+.box{
+    height:80px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid rgb(214, 214, 214);
+}
+.layui-col-md12:nth-of-type(1) .box{
+    border-top: 1px solid rgb(214, 214, 214);
+}
+.box span:nth-of-type(1){
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.box span:nth-of-type(1):hover{
+    color:rgb(42, 111, 240); 
+    cursor: pointer;
+}
+.box span:nth-of-type(2){
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    color: grey;
+}
+.box span:nth-of-type(3){
+    position: absolute;
+    top: 45px;
+    left: 100px;
+    color: grey;
+}
+.box span:nth-of-type(4){
+    position: absolute;
+    top: 45px;
+    left: 700px;
+    color: grey;
+}
+.box span:nth-of-type(5){
+    position: absolute;
+    top: 45px;
+    left: 750px;
+    color: grey;
+}
+.box span:nth-of-type(6){
+    position: absolute;
+    top: 45px;
+    left: 800px;
+    color: grey;
+}
+.labelbox label:nth-of-type(1){
+    margin-left: 100px;
+}
+.labelbox label:nth-of-type(3){
+    color:rgb(42, 111, 240);
+}
+.labelbox{
+    margin-bottom: 20px;
+}
+.layui-form-select dl dd.layui-this {
+    background-color: rgb(42, 111, 240);
+    color: #fff;
+}
+.head_content .page:nth-of-type(1){
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: none;
+}
+.head_content .page:nth-of-type(2){
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: none;
+}
+.head_content .page ul{
+    width: 800px;
+    height: 100%;
+    margin-left: 100px;
+}
+.head_content .page ul a{
+    float: left;
+    margin-right: 150px;
+    margin-left: 50px;
+}
+.head_content .page ul a li{
+    height:40px;
+    line-height: 40px;
+}
+.head_content .page ul a li:hover{
+    color: rgb(42, 111, 240);
+}
+.login{
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    margin-top: -50px;
+    margin-left: 1175px;
+    color: rgb(104, 157, 255);
+}
+#lo,#re{
+    cursor: pointer;
+    margin: 0 10px;
+}
+.cookie{
+    display: none;
+    height: 50px;
+    line-height: 50px;
+    width: 200px;
+    margin-top: -50px;
+    margin-left: 1100px;
+    font-weight: bold;
+    color: grey;
+    cursor: pointer;
+}
+#exit{
+    margin-left: 20px;
+    color: rgb(113, 146, 255);
+}
+.layui-icon-edit{
+    display: block;
+    margin-top: -52px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    height: 30px;
+    width: 40px;
+    border: none;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    background-color:rgb(18, 137, 216);
+    color: white;
+    cursor: pointer;
+}
+#model{
+    width: 800px;
+    height: 300px;
+}
+#submit{
+    width: 100px;
+    text-align: center;
+    background-color:rgb(18, 137, 216);
+    color: white;
+    margin-top: 20px;
+    margin-left: 680px;
+}
+.join{
+    position: absolute;
+    left: 540px;
+    top: 120px;
+}
+.layui-btn {
+    background-color: orangered;
+}

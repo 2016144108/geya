@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.designer.mapper.ScienceLinkMapper">
+
+	<resultMap type="com.example.designer.pojo.ScienceLink" id="selectScienceLink">
+		<id property="scid" column="scid"/>
+		<result property="sid" column="sid"/>
+		<result property="uid" column="uid"/>
+		<association property="science" javaType="com.example.designer.pojo.Science">
+			<id property="sid" column="sid"/>
+			<result property="uid" column="uid"/>
+			<result property="tid" column="tid"/>
+			<result property="mid" column="mid"/>
+			<result property="sname" column="sname"/>
+			<result property="spic" column="spic"/>
+			<result property="snum" column="snum"/>
+			<result property="stime" column="stime"/>
+			<result property="smajor" column="smajor"/>
+			<result property="sintro" column="sintro"/>
+			<result property="status" column="status"/>
+			<result property="stelephone" column="stelephone"/>
+			<result property="sque" column="sque"/>
+			<association property="team" javaType="com.example.designer.pojo.TeamSci">
+				<id property="tid" column="tid"/>
+				<result property="uid" column="uid"/>
+				<result property="mid" column="mid"/>
+				<result property="tname" column="tname"/>
+				<result property="tmajor" column="tmajor"/>
+				<result property="tnum" column="tnum"/>
+				<result property="tintro" column="tintro"/>
+				<result property="tdate" column="tdate"/>
+				<result property="tschool" column="tschool"/>
+				<result property="tpic" column="tpic"/>
+			</association>
+		</association>
+	</resultMap>
+	<select id="selectAllScienceLink" resultMap="selectScienceLink" parameterType="int">
+		select * from sciencelink sl,science s,team t where sl.sid=s.sid and s.tid=t.tid and sl.uid=#{uid} order by sl.scid desc
+	</select>
+	
+	<select id="queryMySciencelink" resultMap="selectScienceLink" parameterType="com.example.designer.pojo.Science">
+		select * from sciencelink sl,science s,team t
+		<where>
+			sl.sid=s.sid and s.tid=t.tid and sl.uid=#{sid}
+			<if test="sname!=null and sname!=''">
+				and s.sname=#{sname}
+			</if>
+			<if test="sintro!=null and sintro!=''">
+				and t.tname=#{sintro}
+			</if>
+			<if test="smajor!=null and smajor!=''">
+				and s.smajor=#{smajor}
+			</if>
+		</where>
+	</select>
+	
+	<select id="selectTheScienceLink" resultMap="selectScienceLink" parameterType="com.example.designer.pojo.ScienceLink">
+		select * from sciencelink sl,science s,team t where sl.sid=s.sid and s.tid=t.tid and sl.uid=#{uid} and sl.sid=#{sid}
+	</select>
+	
+</mapper>

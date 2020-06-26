@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.layui-container{
+    padding-top: 5px;
+    margin-top: -60px;
+    margin-left: 24px;
+}
+
+.head_label{
+    margin-left: 40px;
+    padding-top: 10px;
+    margin-bottom: 50px;
+}
+.head_label label{
+    color: grey;
+} 
+.layui-table {
+    width: 100%;
+    background-color: #fff;
+    color:grey;
+}
+.layui-table thead tr{
+    background-color: rgb(154, 180, 228);
+    color: white;
+}
+table tbody tr td span:nth-of-type(1){
+    cursor: pointer;
+    margin-left: 10px;
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: rgb(154, 180, 228);
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+.layui-icon-add-1{
+    display: inline-block;
+    background-color: tomato;
+    width: 30px;
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+}
+.layui-table-tips-c:before {
+    position: relative;
+    right: 1px;
+    bottom: 3px;
+}
+.text{
+    width: 100px;
+    float: left;
+    margin-right: 20px;
+}
+.layui-input-block{
+    margin-left:0;
+    min-height: 30px;
+    margin-top: 10px;
+}
+.layui-input-block:nth-of-type(1){
+    margin-left:40px;
+}
+.layui-input{
+    height: 30px;
+}
+.search{
+    margin-left:350px;
+    margin-top: -78px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgb(90, 143, 240);
+}
+.layui-btn {
+    padding: 0 ;
+}
+
+.layui-table-tips-c:before {
+    position: relative;
+    right: -2px;
+    bottom: 1px;
+}
+.layui-icon-edit{
+    display: inline-block;
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+.layui-icon-delete{
+    display: inline-block;
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.picbox{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    background-color: brown;
+}
+.layui-table img {
+     height: 100%;
+}
+.layui-table-header .layui-table {
+    width: 1069px;
+}
+.model1{
+    width: 950px;
+    display: none;
+}
+.form_title{
+    width: 900px;
+    padding-top: 20px;
+    border-bottom:1px solid rgb(221, 221, 221) ;
+    margin-left: 50px;
+}
+.form_title p{
+    font-size: 15px;
+    font-weight: bold;
+    width: 80px;
+    padding-bottom: 10px;
+    border-bottom:3px solid rgb(104, 157, 255);
+}
+.one{
+    position: absolute;
+    top: 80px;
+    left: 0;
+}
+.two{
+    position: absolute;
+    top: 80px;
+    left: 300px;
+}
+.three{
+    position: absolute;
+    top: 140px;
+    left: 0;
+}
+.four{
+    position: absolute;
+    top: 140px;
+    left: 300px;
+}
+.five{
+    position: absolute;
+    top: 200px;
+    left: 0;
+}
+.six{
+    position: absolute;
+    top: 260px;
+    left: 0;
+}
+.seven{
+    position: absolute;
+    top: 320px;
+    left: 0;
+}
+.eight{
+    position: absolute;
+    top: 340px;
+    left: 0;
+}
+.school{
+    width: 300px;
+}
+.layui-form-select{
+    width: 240px;
+    margin: -38px 0 0 500px;
+}
+.school:nth-of-type(2){
+    margin: -38px 0 0 250px;
+}
+.layui-form-select .layui-edge {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+}
+.layui-btn {
+    background-color: rgb(113, 146, 255);
+}
+.layui-btn-primary:hover {
+    border-color: rgb(113, 146, 255);
+    color: rgb(113, 146, 255);
+}
+.layui-layer-title{
+    display: none;
+}
+.layui-layer-foooter{
+    display: none;
+}
+#reset{
+    margin-top: 40px;
+    height: 40px;
+    width: 80px;
+}
+#submit{
+    margin-top: 40px;
+    height: 40px;
+    width: 100px;
+}
+.layui-form-select dl dd.layui-this {
+    background-color: rgb(42, 111, 240);
+}

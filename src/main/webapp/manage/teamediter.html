@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>团队维护</title>
+    <link rel="stylesheet" type="text/css" href="../statics/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/teamediter.css"/>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body style="background-color: white;">
+    <div class="head_label" id="head_label">
+        <label>创新创业团队</label>
+        <label  class="layui-icon layui-icon-right">团队维护</label>
+    </div>
+    <div class="layui-container" >  
+    <div class="layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">团队名称</label>
+            <div class="layui-input-block">
+                <input style="width: 30%;" type="text" id="tname" lay-verify="required"  placeholder="请输入新团队名称"  class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">负责人</label>
+            <div class="layui-input-block">
+                <input style="width: 30%;" type="text" id="uname" lay-verify="required"   placeholder="请输入新负责人名"  class="layui-input no" disabled>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">服务领域</label>
+            <div class="layui-input-block">
+                <input style="width: 30%;" type="text" id="tmajor" lay-verify="required"    value="现代服务"  class="layui-input no"  disabled>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">成立时间</label>
+            <div class="layui-input-block">
+                <input style="width: 30%;" type="text" id="tdate"  lay-verify="required"   value="2020-10-12"  class="layui-input no"  disabled>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">团队成员</label>
+            <div class="layui-input-block user">
+                <!-- <div id="rolebox">
+                    <div id="mode" class="mode layui-icon layui-icon-delete" ></div>
+                    <img src="../img/l1 (3).jpg" alt="">
+                </div> -->
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">团队介绍</label>
+            <div class="layui-input-block">
+                <textarea style="width: 90%;height:160px;" id="tintro" placeholder="团队相关介绍......" class="layui-textarea"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn create" lay-submit lay-filter="formDemo">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary reset">重置</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../statics/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/teamediter.js" type="text/javascript" charset="utf-8"></script>
+</html>

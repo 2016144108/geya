@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>团队创新服务</title>
+    <link rel="stylesheet" type="text/css" href="../statics/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/service.css"/>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body style="background-color: white;">
+    <div class="head_label" id="head_label">
+        <label>创新创业团队</label>
+        <label  class="layui-icon layui-icon-right">团队创新服务</label>
+    </div>
+    <form class="layui-form" action="../selectmy" method="post">
+        <div class="layui-form-item">
+          <div class="layui-input-block text">
+              <input  type="text" name="sname" placeholder="服务名" autocomplete="on" class="layui-input">
+              <input  type="text" name="sid" id="userid" style="display: none;">
+          </div>
+          <div class="layui-input-block text">
+              <input  type="text" name="sintro" placeholder="发布者" autocomplete="on" class="layui-input">
+         </div>
+         <div class="layui-input-block text">
+             <input  type="text" name="smajor" placeholder="所属领域" autocomplete="on" class="layui-input">
+        </div>
+        <div class="layui-input-block text">
+            <input  type="text" name="sstate" placeholder="状态" autocomplete="on" class="layui-input">
+       </div>
+        </div>
+        <div class="layui-form-item">
+          <div class="layui-input-block">
+                  <button class="layui-btn search layui-icon layui-icon-search" lay-submit lay-filter="formDemo"></button>
+          </div>
+        </div>
+      </form>
+    <div class="layui-container" >  
+            <table id="demo2" lay-filter="demo2">
+                <thead>
+                  <tr>
+                        <th lay-data="{field:'name',width:200}">服务名</th>
+                        <th lay-data="{field:'experience',width:120}">发布者</th>
+                        <th lay-data="{field:'pic',width:100}">图片</th>
+                        <th lay-data="{field:'experiences',width:120}">所属领域</th>
+                        <th lay-data="{field:'signss',width:200}">创建时间</th>
+                        <th lay-data="{field:'signsss',width:100}">状态</th>
+                        <th lay-data="{field:'signsssw',width:222}">操作</th>
+                  </tr> 
+                </thead>
+                <tbody>
+                  <!-- <tr>
+                        <td>壹佰社交商城</td>
+                        <td>费尔哈</td>
+                        <td>
+                            <div class="picbox" id="picbox">
+                                <img src="../img/l1 (3).jpg" alt="">
+                            </div>
+                        </td>
+                        <td>富恶化</td>
+                        <td>2020-02-02 19:38:58</td>
+                        <td>已结束</td>
+                        <td>
+                            <span class="layui-icon layui-icon-edit"></span>
+                            <span class="layui-icon layui-icon-delete"></span>
+                        </td>
+                  </tr> -->
+                </tbody>
+            </table> 
+    </div>
+    <a href="servicecreate.html"><button class="layui-btn new">新增<span class="layui-icon layui-icon-add-1"></span></button></a>
+</body>
+<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../statics/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/service.js" type="text/javascript" charset="utf-8"></script>
+</html>

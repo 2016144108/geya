@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.designer.mapper.TeamMapper">
+
+	<resultMap type="com.example.designer.pojo.Team" id="selectTeam">
+		<id property="tid" column="tid"/>
+		<result property="uid" column="uid"/>
+		<result property="mid" column="mid"/>
+		<result property="tname" column="tname"/>
+		<result property="tmajor" column="tmajor"/>
+		<result property="tnum" column="tnum"/>
+		<result property="tintro" column="tintro"/>
+		<result property="tdate" column="tdate"/>
+		<result property="tschool" column="tschool"/>
+		<result property="tpic" column="tpic"/>
+		<association property="user" javaType="com.example.designer.pojo.User">
+			<id property="uid" column="uid"/>
+			<result property="tid" column="tid"/>
+			<result property="userid" column="userid"/>
+			<result property="uname" column="uname"/>
+			<result property="upassword" column="upassword"/>
+			<result property="utelephone" column="utelephone"/>
+			<result property="uqq" column="uqq"/>
+			<result property="ubirthday" column="ubirthday"/>
+			<result property="uschool" column="uschool"/>
+			<result property="ustudy" column="ustudy"/>
+			<result property="ugrade" column="ugrade"/>
+			<result property="upic" column="upic"/>
+			<result property="uma" column="uma"/>
+		</association>
+	</resultMap>
+	<select id="queryAllTeam" resultMap="selectTeam">
+		select * from team t,user u where t.uid=u.uid
+	</select>
+	
+	<select id="querySixTeam" resultMap="selectTeam">
+		select * from team t,user u where t.uid=u.uid order by t.tid desc limit 0,6
+	</select>
+	
+	<select id="querySomeTeam" resultMap="selectTeam" parameterType="com.example.designer.pojo.Team">
+		select * from team t,user u
+		<where>
+			<if test="tname!=null and tname!=''">
+				and t.tname=#{tname}
+			</if>
+			<if test="tmajor!=null and tmajor!=''">
+				and t.tmajor=#{tmajor}
+			</if>
+			<if test="tintro!=null and tintro!=''">
+				and u.uname=#{tintro}
+			</if>
+			and t.uid=u.uid
+		</where>
+	</select>
+	
+	<select id="queryTheTeam" resultMap="selectTeam" parameterType="int">
+		select * from team t,user u where t.uid=u.uid and t.tid=#{tid}
+	</select>
+	
+	<resultMap type="com.example.designer.pojo.Services" id="selectServices">
+		<id property="sid" column="sid"/>
+		<result property="uid" column="uid"/>
+		<result property="tid" column="tid"/>
+		<result property="mid" column="mid"/>
+		<result property="sname" column="sname"/>
+		<result property="spic" column="spic"/>
+		<result property="snum" column="snum"/>
+		<result property="sintro" column="sintro"/>
+		<result property="smajor" column="smajor"/>
+		<result property="sstime" column="sstime"/>
+		<result property="setime" column="setime"/>
+		<result property="sctime" column="sctime"/>
+		<result property="sread" column="sread"/>
+		<result property="sservice" column="sservice"/>
+		<result property="sgood" column="sgood"/>
+		<result property="sbad" column="sbad"/>
+		<result property="ssave" column="ssave"/>
+		<result property="stelephone" column="stelephone"/>
+		<result property="sfile" column="sfile"/>
+		<result property="sstate" column="sstate"/>
+		<association property="team" javaType="com.example.designer.pojo.TeamSci">
+			<id property="tid" column="tid"/>
+			<result property="uid" column="uid"/>
+			<result property="mid" column="mid"/>
+			<result property="tname" column="tname"/>
+			<result property="tmajor" column="tmajor"/>
+			<result property="tnum" column="tnum"/>
+			<result property="tintro" column="tintro"/>
+			<result property="tdate" column="tdate"/>
+			<result property="tschool" column="tschool"/>
+			<result property="tpic" column="tpic"/>
+		</association>
+	</resultMap>
+	<select id="queryAllService" resultMap="selectServices" parameterType="int">
+		select * from service s,team t where s.tid=t.tid and s.tid=#{tid} and s.status=1
+	</select>
+	
+	<insert id="InsertTeam" parameterType="com.example.designer.pojo.Team">
+		<selectKey keyColumn="tid" keyProperty="tid" order="AFTER" resultType="int">
+			select LAST_INSERT_ID()
+		</selectKey>
+		insert into team (mid,uid,tname,tmajor,tnum,tintro,tdate,tschool,tpic) values (#{mid},#{uid},#{tname},#{tmajor},#{tnum},#{tintro},#{tdate},#{tschool},#{tpic})
+	</insert>
+	
+	<resultMap type="com.example.designer.pojo.Science" id="selectScience">
+		<id property="sid" column="sid"/>
+		<result property="uid" column="uid"/>
+		<result property="tid" column="tid"/>
+		<result property="mid" column="mid"/>
+		<result property="sname" column="sname"/>
+		<result property="spic" column="spic"/>
+		<result property="snum" column="snum"/>
+		<result property="stime" column="stime"/>
+		<result property="smajor" column="smajor"/>
+		<result property="sintro" column="sintro"/>
+		<result property="stelephone" column="stelephone"/>
+		<result property="sque" column="sque"/>
+		<association property="team" javaType="com.example.designer.pojo.TeamSci">
+			<id property="tid" column="tid"/>
+			<result property="uid" column="uid"/>
+			<result property="mid" column="mid"/>
+			<result property="tname" column="tname"/>
+			<result property="tmajor" column="tmajor"/>
+			<result property="tnum" column="tnum"/>
+			<result property="tintro" column="tintro"/>
+			<result property="tdate" column="tdate"/>
+			<result property="tschool" column="tschool"/>
+			<result property="tpic" column="tpic"/>
+		</association>
+	</resultMap>
+	<select id="queryAllScience" resultMap="selectScience" parameterType="int">
+		select * from science s,team t where s.tid=t.tid and s.tid=#{tid} and s.status=1
+	</select>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace: 该mapper.xml映射文件唯一标识 -->
+<mapper namespace="com.example.designer.mapper.UserMapper">
+
+	<update id="editeruser" parameterType="com.example.designer.pojo.User">
+		update user set utelephone=#{utelephone} , uqq=#{uqq} 
+		, ubirthday=#{ubirthday} , uschool=#{uschool} , ustudy=#{ustudy} 
+		, ugrade=#{ugrade} 
+		<if test="upic!=null and upic!=''">
+			, upic=#{upic}
+		</if>
+		<if test="upassword!=null and upassword!=''">
+			, upassword=#{upassword}
+		</if>
+		where uid=#{uid}
+	</update>
+
+</mapper>

@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.layui-container{
+    padding-top: 15px;
+}
+.no,.no:hover {
+    cursor: not-allowed;
+    color:rgb(197, 197, 197);
+}
+.layui-textarea{
+    resize: none;
+}
+.layui-btn {
+    background-color: rgb(113, 146, 255);
+}
+.layui-btn-primary {
+    background-color: rgb(243, 243, 243);
+}
+.layui-btn-primary:hover {
+    border-color: rgb(113, 146, 255);
+    color: rgb(113, 146, 255);
+}
+#rolebox{
+    float: left;
+    margin-right: 5px;
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+.head_label{
+    margin-left: 40px;
+    padding-top: 10px;
+}
+.head_label label{
+    color: grey;
+} 
+#layui-laydate1{
+    top:-200px
+}
+.layui-form-select dl dd.layui-this {
+    background-color: rgb(113, 146, 255);
+}

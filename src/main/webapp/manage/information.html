@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>团队基本信息</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../statics/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/information.css"/>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body style="background-color: white;"> 
+    <div class="head_label" id="head_label">
+        <label>创新创业团队</label>
+        <label  class="layui-icon layui-icon-right">团队基本信息</label>
+    </div>
+    <div class="layui-container">
+        <div id="headbox">
+            <div id="imgbox"><img src="../img/1.jpg" alt=""></div>
+            <h2 id="tname">D-TIME摄影工作室</h2>
+            <span id="uname">负责人：黄奕丹</span>
+            <span id="tmajor">服务领域：现代服务</span>
+            <span id="tdate">成立时间：2019年9月</span>
+            <p id="tintro"></p>
+        </div>
+        <div>
+            <div class="layui-tab layui-tab-card" lay-filter="docDemoTabBrief" style="overflow: hidden;">
+                <ul class="layui-tab-title">
+                  <li class="layui-this">团队介绍</li>
+                  <li>团队成员</li>
+                  <li>团队动态</li>
+                  <li>团队服务</li>
+                  <li>团队事件</li>
+                </ul>
+                <div class="layui-tab-content">
+                  <div class="layui-tab-item layui-show">
+                    <p id="tcontent"></p>
+                  </div>
+                  <div class="layui-tab-item layui-row user">
+                    <!-- <div class="layui-col-md2">
+                        <div id="box">
+                            <div id="imgbox">
+                            <img src="../img/1.jpg" title="林枫">
+                            </div>
+                            <title id="role">王磊</title>
+                        </div>
+                    </div> -->
+                  </div>
+                  <div class="layui-tab-item layui-row story">
+                    <!-- <div class="layui-col-md12">
+                        <div id="ibox">
+                            <p id="info">标题：工作室的拍摄制作流程</p>
+                            <p id="info">发布时间：2018-03-17</p>
+                        </div>
+                    </div> -->
+                  </div>
+                  <div class="layui-tab-item layui-row service">
+                    <!-- <div class="layui-col-md6">
+                        <a href="serviceinfo2.html?sid=1">
+                        <div id="servicebox">
+                            <div id="imgbox">
+                                <img src="../img/1.jpg" alt="" srcset="">
+                            </div>
+                            <span>D-TIME工作室</span>
+                            <span>现代服务</span>
+                            <span>项目简介：成为最专业、最有信誉和实力的摄影工作室，成为商品行业和广告行业中有实力的摄影工作室。
+                                </span>
+                        </div>
+                        </a>
+                    </div> -->
+                  </div>
+                  <div class="layui-tab-item">
+                    <ul class="layui-timeline">
+		            </ul>
+                  </div>
+                </div>
+          </div>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../statics/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/information.js" type="text/javascript" charset="utf-8"></script>
+</html>

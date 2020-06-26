@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace: 该mapper.xml映射文件唯一标识 -->
+<mapper namespace="com.example.designer.mapper.LessonMapper">
+
+	<select id="selectTheLesson" parameterType="String" resultType="com.example.designer.pojo.Lesson">
+		select * from lesson
+		<where>
+			<if test="lmajor!=null and lmajor!=''">
+				and lmajor=#{lmajor}	
+			</if>
+		</where>
+	</select>
+	
+	<resultMap type="com.example.designer.pojo.LessonLink" id="selectLessonLink">
+		<id property="leid" column="leid"/>
+		<result property="lid" column="lid"/>
+		<result property="uid" column="uid"/>
+		<association property="lesson" javaType="com.example.designer.pojo.Lesson">
+			<id property="lid" column="tid"/>
+			<result property="mid" column="mid"/>
+			<result property="lname" column="lname"/>
+			<result property="lmajor" column="lmajor"/>
+			<result property="lteacher" column="lteacher"/>
+			<result property="lnum" column="lnum"/>
+			<result property="lstar" column="lstar"/>
+			<result property="lintro" column="lintro"/>
+			<result property="lpic" column="lpic"/>
+			<result property="lurl" column="lurl"/>
+		</association>
+	</resultMap>
+	<select id="selectALessonLink" resultMap="selectLessonLink" parameterType="com.example.designer.pojo.Lesson">
+		select * from lessonlink ll,lesson l where ll.lid=l.lid and ll.uid=#{uid} and ll.lid=#{lid}
+	</select>
+	
+	<update id="uplesson" parameterType="com.example.designer.pojo.Lesson">
+		update lesson set mid=#{mid} , lname=#{lname} 
+		, lmajor=#{lmajor} , lteacher=#{lteacher} , lstar=#{lstar} 
+		, lintro=#{lintro} ,lurl=#{lurl}
+		<if test="lpic!=null and lpic!=''">
+			, lpic=#{lpic}
+		</if>
+		where lid=#{lid}
+	</update>
+</mapper>

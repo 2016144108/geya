@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>团队管理系统</title>
+    <link rel="stylesheet" type="text/css" href="../statics/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+  			<div class="layui-header"> 
+    			<div class="layui-logo">大学生创新创业服务团队管理系统</div>
+    			<ul class="layui-nav layui-layout-right">
+      				<li class="layui-nav-item">
+        				<a href="javascript:;">
+          					<img src="../img/1.jpg" class="layui-nav-img userimg">
+        					<span id="user" class="layui-icon layui-icon-friends">admin</span>	 
+        				</a>
+        				<dl class="layui-nav-child">
+          					<dd><a href="personinfo.html" target="iframe">基本资料</a></dd>
+          					<dd><a href="personediter.html" target="iframe">安全设置</a></dd>
+        				</dl>
+      				</li>
+      				<li id="logout" class="layui-nav-item logout">注销</li>
+    			</ul>
+  			</div>
+  		<div class="layui-side layui-bg-black">
+    		<div class="layui-side-scroll">
+      			<ul class="layui-nav layui-nav-tree" lay-shrink="all"  lay-filter="test">
+        			<li class="layui-nav-item">
+          				<a lay-id="index" class="" data-type="tabAdd" href="welcome.html" target="iframe"><span class="layui-icon layui-icon-theme">&nbsp;</span>首页</a>
+        			</li>
+        			<li class="layui-nav-item">
+          				<a class="" href="javascript:;"><span class="layui-icon layui-icon-template-1">&nbsp;</span>创业资源</a>
+          				<dl class="layui-nav-child">
+            				<dd><a data-type="tabAdd" href="lesson.html" target="iframe">创业课程</a></dd>
+            				<dd><a data-type="tabAdd" href="teacher.html" target="iframe">资深创新导师</a></dd>
+            				<dd><a data-type="tabAdd" href="team.html" target="iframe">优秀创新团队</a></dd>
+            				<dd><a data-type="tabAdd" href="service2.html" target="iframe">优质创业服务</a></dd>
+            				<dd><a data-type="tabAdd" href="science.html" target="iframe">优质技术沙龙</a></dd>
+          				</dl>
+        			</li>
+        			<li class="layui-nav-item">
+          				<a class="" href="javascript:;"><span class="layui-icon layui-icon-picture">&nbsp;</span>云数据分析</a>
+          				<dl class="layui-nav-child">
+            				<dd><a data-type="tabAdd" href="system.html" target="iframe">系统分析</a></dd>
+          				</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a class="" href="javascript:;"><span class="layui-icon layui-icon-app">&nbsp;</span>我的资源</a>
+						<dl class="layui-nav-child">
+						  <dd><a data-type="tabAdd" href="lessonlink.html" target="iframe">我的课程</a></dd>
+						  <dd><a data-type="tabAdd" href="servicelink.html" target="iframe">我的服务</a></dd>
+						  <dd><a data-type="tabAdd" href="sciencelink.html" target="iframe">我的沙龙</a></dd>
+						</dl>
+				  </li>
+        			<li class="layui-nav-item">
+          				<a class="" href="javascript:;"><span class="layui-icon layui-icon-set-fill">&nbsp;</span>创新创业团队</a>
+          				<dl class="layui-nav-child">
+            				<dd><a data-type="tabAdd" id="info" href="information.html" target="iframe">团队基本信息</a></dd>
+            				<dd><a data-type="tabAdd" id="tedi" href="teamediter.html" target="iframe">团队维护</a></dd>
+							<dd><a data-type="tabAdd" id="ser" href="service.html" target="iframe">团队创新服务</a></dd>
+            				<dd><a data-type="tabAdd" id="serc" href="servicecreate.html" target="iframe">服务发布</a></dd>
+							<dd><a data-type="tabAdd" id="sci" href="science2.html" target="iframe">团队技术沙龙</a></dd>
+            				<dd><a data-type="tabAdd" id="scic" href="sciencecreate.html" target="iframe">沙龙发布</a></dd>
+            				<dd><a data-type="tabAdd" id="que" href="question.html" target="iframe">沙龙话题讨论</a></dd>
+            				<dd><a data-type="tabAdd" id="com" href="commons.html" target="iframe">话题评论</a></dd>
+          				</dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a lay-id="index" class="" data-type="tabAdd" href="download.html" target="iframe"><span class="layui-icon layui-icon-link">&nbsp;</span>移动端下载</a>
+                    </li>
+      			</ul>
+    		</div>
+  		</div>
+  		<div class="layui-body">
+    		<div id="iframebox" style="padding: 0px;">
+    			<iframe src="welcome.html" class="iframe" id="iframe" name="iframe"></iframe>
+    		</div>
+  	    </div>
+  	<div class="layui-footer">
+    	©College Students' Innovation And Entrepreneurship Service Platform
+  	</div>
+	</div>
+</body>
+<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../statics/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+</html>

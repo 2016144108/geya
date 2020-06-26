@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.head_box{
+    width: 100%;
+    height: 50px;
+}
+.logo{
+    width: 100px;
+    height: 50px;
+    margin-left: 150px;
+}
+.logo img{
+    height:80%;
+    padding-top: 5px;
+}
+.head_up{
+    width:100%;
+    height: 50px;
+}
+.head_up ul{
+    width:300px;
+    height: 50px;
+    margin-left:210px;
+    margin-top: -50px;
+}
+.head_up ul a{
+    width:70px;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+}
+.head_up ul a li{
+    width:70px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.head_content{
+    position: absolute;
+    display: none;
+    top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.head_content{
+    position: absolute;
+    display: none;
+    top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.footer_box{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(29, 29, 29);
+}
+.footer_box p{
+    margin-top:5px ;
+    margin-left: 100px;
+    font-size: 15px;
+    color: white;
+}
+.footer_box p:nth-of-type(1){
+    padding-top:20px ;
+}
+.footer_box ul{
+    margin-left: 80px;
+    margin-top: 5px;
+}
+.footer_box ul li{
+    float: left;
+    font-size: 15px;
+    color: white;
+    margin-left: 20px;
+}
+.body_box{
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: rgb(241, 241, 241);
+    padding-top: 20px;
+}
+#page_box{
+    margin-top: 20px;
+    margin-left: 900px;
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: rgb(42, 111, 240);
+}
+.layui-laypage a:hover {
+    color:rgb(42, 111, 240);
+}
+.layui-form-item:nth-of-type(2){
+    width: 150px;
+    margin-top: -53px;
+    margin-left: 100px;
+}
+.layui-form-select dl dd.layui-this {
+    background-color: rgb(90, 130, 206);
+    color: #fff;
+}
+.box{
+    width: 96%;
+    height: 150px;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: white;
+    border: 1px solid rgb(204, 204, 204);
+    cursor: pointer;
+}
+.box:hover{
+    border: 1px solid rgb(42, 111, 240);
+}
+.box .img_box{
+    position:absolute ;
+    top: 10px;
+    left: 10px;
+    width: 40%;
+    height: 130px;
+    overflow: hidden;
+}
+.box .img_box img{
+    width: 100%;
+}
+.box span:nth-of-type(1){
+    position:absolute ;
+    top: 15px;
+    left: 185px;
+    font-size: 13px;
+    color: grey;
+}
+.box span:nth-of-type(2){
+    position:absolute ;
+    top: 35px;
+    left: 185px;
+    font-size: 13px;
+    color: grey;
+}
+.box span:nth-of-type(3){
+    position:absolute ;
+    top: 35px;
+    left: 280px;
+    font-size: 13px;
+    color: grey;
+}
+.box p{
+    position:absolute ;
+    top: 55px;
+    left: 185px;
+    font-size: 13px;
+    color: grey;
+    background-color: transparent;
+}
+.body_box ul{
+    width: 90%;
+    height: 40px;
+    background-color: white;
+    margin-left: 60px;
+    box-shadow: 0 0 5px rgb(199, 199, 199);
+    margin-bottom:20px ;
+    position: relative;
+}
+.input_box1{
+    width: 150px;
+    height: 30px;
+    border-radius: 50px;
+    position: absolute;
+    top:5px;
+    left: -100px;
+}
+.input_box2{
+    width: 150px;
+    height: 30px;
+    border-radius: 50px;
+    position: absolute;
+    top:7px;
+    left: -40px;
+}
+.input_box3{
+    width: 150px;
+    height: 30px;
+    border-radius: 50px;
+    position: absolute;
+    top:-44px;
+    left: 220px;
+}
+.button_box{
+    width: 60px;
+    margin-top: -176px;
+    margin-left: 360px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color: rgb(163, 163, 163);
+    font-size: 18px;
+}
+.layui-row{
+    width: 91%;
+    margin-left: 60px;
+}
+.box label{
+    display: none;
+}
+.labelbox label:nth-of-type(1){
+    margin-left: 60px;
+}
+.labelbox label:nth-of-type(2){
+    color:rgb(42, 111, 240);
+}
+.labelbox{
+    margin-bottom: 20px;
+}
+.layui-icon-search:hover{
+    color: grey;
+}
+.head_content .page:nth-of-type(1){
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: none;
+}
+.head_content .page:nth-of-type(2){
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: none;
+}
+.head_content .page ul{
+    width: 800px;
+    height: 100%;
+    margin-left: 100px;
+}
+.head_content .page ul a{
+    float: left;
+    margin-right: 150px;
+    margin-left: 50px;
+}
+.head_content .page ul a li{
+    height:40px;
+    line-height: 40px;
+}
+.head_content .page ul a li:hover{
+    color: rgb(42, 111, 240);
+}
+.login{
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    margin-top: -50px;
+    margin-left: 1175px;
+    color: rgb(104, 157, 255);
+}
+#lo,#re{
+    cursor: pointer;
+    margin: 0 10px;
+}
+.cookie{
+    display: none;
+    height: 50px;
+    line-height: 50px;
+    width: 200px;
+    margin-top: -50px;
+    margin-left: 1100px;
+    font-weight: bold;
+    color: grey;
+    cursor: pointer;
+}
+#exit{
+    margin-left: 20px;
+    color: rgb(113, 146, 255);
+}

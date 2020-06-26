@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.layui-container{
+    padding-top: 15px;
+}
+.layui-container .layui-row .layui-col-md3 div{
+    background-color: rgb(248, 248, 248);
+    width: 90%;
+    height: 220px;
+    padding: 10px;
+    border: 1px solid rgb(226, 226, 226);
+}
+.layui-container .layui-row .layui-col-md3 div:hover{
+    box-shadow: 0px 0px 5px gray;
+}
+.layui-container .layui-row .layui-col-md3{
+    height: 250px;
+}
+.layui-container .layui-row .layui-col-md3 div img{
+    width: 100%;
+    height: 140px;
+}
+.layui-container .layui-row .layui-col-md3 div p:nth-of-type(1){
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.layui-container .layui-row .layui-col-md3 div span{
+    color: gray;
+}
+.layui-container .layui-row .layui-col-md3 div span:nth-of-type(1){
+    margin-left: 10px;
+    color: gray;
+}
+.layui-container .layui-row .layui-col-md3 div span:nth-of-type(3){
+    border: 1px solid rgb(0, 132, 255);
+    color: rgb(0, 132, 255);
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 1px;
+}
+.layui-container .layui-row .layui-col-md3 div p:nth-of-type(2){
+    margin-left: 10px;
+    margin-bottom: -22px;
+    color: gray;
+}
+.layui-container .layui-row .layui-col-md3 div label{
+    background-color: rgb(0, 132, 255);
+    color: white;
+    margin-left: 220px;
+    display: block;
+    width: 20px;
+    text-align: center;
+    line-height: 20px;
+    height: 20px;
+    font-size: 10px;
+    cursor: pointer;
+}
+.head_label{
+    margin-left: 40px;
+    padding-top: 10px;
+}
+.head_label label{
+    color: grey;
+} 

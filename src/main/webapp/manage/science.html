@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优质技术沙龙</title>
+    <link rel="stylesheet" type="text/css" href="../statics/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/science.css"/>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body style="background-color: white;">
+    <div class="head_label" id="head_label">
+        <label>创业资源</label>
+        <label  class="layui-icon layui-icon-right">优质技术沙龙</label>
+    </div>
+    <form class="layui-form" action="../queryscience" method="post">
+      <div class="layui-form-item">
+        <div class="layui-input-block text">
+            <input  type="text" name="sname" placeholder="名称" autocomplete="on" class="layui-input">
+        </div>
+        <div class="layui-input-block text">
+            <input  type="text" name="sintro" placeholder="发布者" autocomplete="on" class="layui-input">
+       </div>
+       <div class="layui-input-block text">
+           <input  type="text" name="smajor" placeholder="所属领域" autocomplete="on" class="layui-input">
+      </div>
+      </div>
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+                <button class="layui-btn search layui-icon layui-icon-search" lay-submit lay-filter="formDemo"></button>
+        </div>
+      </div>
+    </form>
+    <div class="layui-container" >  
+            <table id="demo2" lay-filter="demo2">
+                <thead>
+                  <tr>
+                        <th lay-data="{field:'name'}">名称</th>
+                        <th lay-data="{field:'experience'}">发布者</th>
+                        <th lay-data="{field:'experiences'}">所属领域</th>
+                        <th lay-data="{field:'signs'}">成员</th>
+                        <th lay-data="{field:'signss'}">创建时间</th>
+                        <th lay-data="{field:'signsssw'}">操作</th>
+                  </tr> 
+                </thead>
+                <tbody>
+                  <!-- <tr>
+                        <td>讲美的创业故事 </td>
+                        <td>费尔哈</td>
+                        <td>富恶化</td>
+                        <td>5人</td>
+                        <td>2020-02-02 19:38:58</td>
+                        <td><span class="layui-icon layui-icon-add-1"></span></td>
+                  </tr> -->
+                </tbody>
+            </table> 
+    </div>
+</body>
+<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../statics/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/science.js" type="text/javascript" charset="utf-8"></script>
+</html>

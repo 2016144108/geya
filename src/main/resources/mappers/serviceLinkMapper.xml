@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.designer.mapper.ServiceLinkMapper">
+
+	<resultMap type="com.example.designer.pojo.ServiceLink" id="selectServiceLink">
+		<id property="seid" column="seid"/>
+		<result property="sid" column="sid"/>
+		<result property="uid" column="uid"/>
+		<association property="service" javaType="com.example.designer.pojo.Services">
+			<id property="sid" column="sid"/>
+			<result property="uid" column="uid"/>
+			<result property="tid" column="tid"/>
+			<result property="mid" column="mid"/>
+			<result property="sname" column="sname"/>
+			<result property="spic" column="spic"/>
+			<result property="snum" column="snum"/>
+			<result property="sintro" column="sintro"/>
+			<result property="smajor" column="smajor"/>
+			<result property="sstime" column="sstime"/>
+			<result property="setime" column="setime"/>
+			<result property="status" column="status"/>
+			<result property="sctime" column="sctime"/>
+			<result property="sread" column="sread"/>
+			<result property="sservice" column="sservice"/>
+			<result property="sgood" column="sgood"/>
+			<result property="sbad" column="sbad"/>
+			<result property="ssave" column="ssave"/>
+			<result property="stelephone" column="stelephone"/>
+			<result property="sfile" column="sfile"/>
+			<result property="sstate" column="sstate"/>
+			<association property="team" javaType="com.example.designer.pojo.TeamSci">
+				<id property="tid" column="tid"/>
+				<result property="uid" column="uid"/>
+				<result property="mid" column="mid"/>
+				<result property="tname" column="tname"/>
+				<result property="tmajor" column="tmajor"/>
+				<result property="tnum" column="tnum"/>
+				<result property="tintro" column="tintro"/>
+				<result property="tdate" column="tdate"/>
+				<result property="tschool" column="tschool"/>
+				<result property="tpic" column="tpic"/>
+			</association>
+		</association>
+	</resultMap>
+	<select id="selectAllServiceLink" resultMap="selectServiceLink" parameterType="int">
+		select * from servicelink sl,service s,team t where sl.sid=s.sid and s.tid=t.tid and sl.uid=#{uid} order by sl.seid desc
+	</select>
+	
+	<select id="queryMyServicelink" resultMap="selectServiceLink" parameterType="com.example.designer.pojo.Services">
+		select * from servicelink sl,service s,team t
+		<where>
+			sl.sid=s.sid and s.tid=t.tid and sl.uid=#{sid}
+			<if test="sname!=null and sname!=''">
+				and s.sname=#{sname}
+			</if>
+			<if test="sintro!=null and sintro!=''">
+				and t.tname=#{sintro}
+			</if>
+			<if test="smajor!=null and smajor!=''">
+				and s.smajor=#{smajor}
+			</if>
+		</where>
+	</select>
+	
+	<select id="selectTheServiceLink" resultMap="selectServiceLink" parameterType="com.example.designer.pojo.ServiceLink">
+		select * from servicelink sl,service s,team t where sl.sid=s.sid and s.tid=t.tid and sl.uid=#{uid} and sl.sid=#{sid}
+	</select>
+	
+</mapper>

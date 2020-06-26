@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基本资料</title>
+    <link rel="stylesheet" type="text/css" href="../statics/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/personinfo.css"/>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body style="background-color: white;">
+    <div class="head_label" id="head_label">
+        <label>管理系统</label>
+        <label  class="layui-icon layui-icon-right">基本资料</label>
+    </div>
+    <div class="layui-container" >  
+    <div class="layui-form">
+        <div class="layui-form-item  one">
+            <label class="layui-form-label">用户ID</label>
+            <div class="layui-input-block">
+                <input style="width: 300px;" type="text" id="userid" lay-verify="required"  value="User-01"  class="layui-input" disabled>
+            </div>
+        </div>
+        <div class="layui-form-item two">
+            <label class="layui-form-label">用户名</label>
+            <div class="layui-input-block">
+                <input style="width: 300px;" type="text" id="uname" lay-verify="required"   value="林枫"  class="layui-input" disabled>
+            </div>
+        </div>
+        <div class="layui-form-item three">
+            <label class="layui-form-label">旧密码</label>
+            <div class="layui-input-block">
+                <input style="width: 300px;" type="text" id="upassword" lay-verify="required"    value="123"  class="layui-input"  disabled>
+            </div>
+        </div>
+        <div class="layui-form-item five">
+            <label class="layui-form-label">电话</label>
+            <div class="layui-input-block">
+                <input style="width: 300px;" type="text" id="utelephone"  lay-verify="required"   value="13402124542"  class="layui-input" disabled>
+            </div>
+        </div>
+        <div class="layui-form-item six">
+            <label class="layui-form-label">QQ</label>
+            <div class="layui-input-block">
+                <input style="width: 300px;" type="text" id="uqq"  lay-verify="required"   value="13402124542"  class="layui-input" disabled>
+            </div>
+        </div>
+        <div class="layui-form-item seven">
+            <label class="layui-form-label">生日</label>
+            <div class="layui-input-block">
+                <input style="width: 300px;" type="text" id="ubirthday"  lay-verify="required"   value="2020-10-10"  class="layui-input birthday" disabled>
+            </div>
+        </div>
+        <div class="layui-form-item eight">
+            <label class="layui-form-label">毕业院校</label>
+            <div class="layui-input-block">
+                <input style="width: 300px;" type="text" id="uschool" lay-verify="required"    value="江苏理工学院"  class="layui-input school" disabled>
+                <input style="width: 300px;" type="text" id="ustudy" lay-verify="required"    value="计算机工程学院"  class="layui-input school" disabled>
+                <input style="width: 300px;" type="text" id="ugrade" lay-verify="required"    value="2016级"  class="layui-input school" disabled>
+            </div>
+        </div>
+        <div class="layui-form-item nine">
+            <label class="layui-form-label">照片</label>
+            <div class="layui-input-block">
+                <img id="upic" src="../img/role.jpg">
+            </div>
+        </div>
+        <div class="layui-form-item eleven">
+            <div class="layui-input-block">
+                <a href="personediter.html"><button class="layui-btn">编辑资料</button></a>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../statics/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/personinfo.js" type="text/javascript" charset="utf-8"></script>
+</html>

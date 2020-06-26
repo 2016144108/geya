@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>服务发布</title>
+    <link rel="stylesheet" type="text/css" href="../statics/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/serviceediter.css"/>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body style="background-color: white;">
+    <div class="head_label" id="head_label">
+        <label>创新创业团队</label>
+        <label  class="layui-icon layui-icon-right">服务编辑</label>
+    </div>
+    <div class="layui-container" >  
+        <div class="layui-form">
+            <div class="layui-form-item one">
+                <label class="layui-form-label">服务名称</label>
+                <div class="layui-input-block">
+                    <input style="width: 300px;" type="text" lay-verify="required" autocomplete="on" id="sname"  placeholder="服务名称"  class="layui-input  sname">
+                </div>
+            </div>
+            <div class="layui-form-item two">
+                <label class="layui-form-label">发布者</label>
+                <div class="layui-input-block">
+                    <input style="width: 300px;" type="text" lay-verify="required" autocomplete="on" id="tname"   value="水果商"  class="layui-input disabled" disabled>
+                </div>
+            </div>
+            <div class="layui-form-item three">
+                <label class="layui-form-label">负责人</label>
+                <div style="width: 300px" class="layui-input-block">
+                <select id="uname" lay-verify="required">
+                    <!-- <option value=""></option>
+                    <option value="0">数字媒体</option>
+                    <option value="1">计算机软件</option>
+                    <option value="2">计算机服务</option>
+                    <option value="3">人工智能</option>
+                    <option value="4">计算机视觉</option> -->
+                </select>
+            </div>
+            </div>
+            <div class="layui-form-item four">
+                <label class="layui-form-label">联系方式</label>
+                <div class="layui-input-block">
+                    <input style="width: 300px;" type="text" lay-verify="required" autocomplete="on" id="stelephone"   placeholder="联系方式"  class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item five">
+                <label class="layui-form-label">所属领域</label>
+                <div class="layui-input-block">
+                    <input style="width: 300px;" type="text" lay-verify="required" autocomplete="on" id="smajor"   value="计算机科学"  class="layui-input disabled" disabled>
+                </div>
+            </div>
+            <div class="layui-form-item six">
+                <label class="layui-form-label">开始时间</label>
+                <div class="layui-input-block">
+                    <input style="width: 300px;" type="text" lay-verify="required" autocomplete="on"  id="start"  value="2020-01-01 00:00:00"    class="layui-input time">
+                </div>
+            </div>
+            <div class="layui-form-item seven">
+                <label class="layui-form-label">结束时间</label>
+                <div class="layui-input-block">
+                    <input style="width: 300px;" type="text" lay-verify="required" autocomplete="on"  id="end"  value="2020-01-01 00:00:00"    class="layui-input time">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text eight">
+                <label class="layui-form-label">文件</label>
+                <button type="button"  class="layui-btn" id="test1">
+                    <i class="layui-icon">&#xe67c;</i>服务图片
+                </button> 
+                <button type="button" class="layui-btn" id="test2">
+                    <i class="layui-icon">&#xe67c;</i>附件
+                </button>
+            </div>
+            <div class="layui-form-item layui-form-text nine">
+                <label class="layui-form-label">服务介绍</label>
+                <div class="layui-input-block">
+                    <textarea lay-verify="required" style="width: 900px;height:160px" id="sintro"  autocomplete="on" placeholder="请输入服务相关简介" class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item ten">
+                <div class="layui-input-block">
+                    <button class="layui-btn send" lay-submit lay-filter="formDemo">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary reset">重置</button>
+                </div>
+            </div>
+        </div>
+        </div>
+</body>
+<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../statics/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/serviceediter.js" type="text/javascript" charset="utf-8"></script>
+</html>

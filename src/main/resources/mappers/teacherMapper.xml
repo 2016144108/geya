@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace: 该mapper.xml映射文件唯一标识 -->
+<mapper namespace="com.example.designer.mapper.TeacherMapper">
+
+	<select id="selectTheTeacher" parameterType="com.example.designer.pojo.Teacher" resultType="com.example.designer.pojo.Teacher">
+		select * from teacher
+		<where>
+			<if test="tname!=null and tname!=''">
+				and tname=#{tname}
+			</if>	
+			<if test="tschool!=null and tschool!=''">
+				and tschool=#{tschool}
+			</if>
+			<if test="tstatus!=null and tstatus!=''">
+				and tstatus=#{tstatus}
+			</if>	
+		</where>
+	</select>
+	
+	<select id="selectSomeTeacher" parameterType="com.example.designer.pojo.Teacher" resultType="com.example.designer.pojo.Teacher">
+		select * from teacher
+		<where>
+			<if test="tname!=null and tname!=''">
+				and tname=#{tname}
+			</if>	
+			<if test="tschool!=null and tschool!=''">
+				and tschool=#{tschool}
+			</if>
+			<if test="tmajor!=null and tmajor!=''">
+				and tmajor=#{tmajor}
+			</if>	
+		</where>
+	</select>
+	
+	<update id="upteacher" parameterType="com.example.designer.pojo.Teacher">
+		update teacher set mid=#{mid} , tname=#{tname} 
+		, tschool=#{tschool} , tstatus=#{tstatus} , tmajor=#{tmajor} 
+		, tintro=#{tintro} ,ttelephone=#{ttelephone}
+		<if test="tpic!=null and tpic!=''">
+			, tpic=#{tpic}
+		</if>
+		where tid=#{tid}
+	</update>
+</mapper>

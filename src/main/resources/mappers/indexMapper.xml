@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.designer.mapper.IndexMapper">
+
+	<resultMap type="com.example.designer.pojo.ScienceIndex" id="selectScience">
+		<id property="sid" column="sid"/>
+		<result property="uid" column="uid"/>
+		<result property="tid" column="tid"/>
+		<result property="mid" column="mid"/>
+		<result property="sname" column="sname"/>
+		<result property="spic" column="spic"/>
+		<result property="snum" column="snum"/>
+		<result property="stime" column="stime"/>
+		<result property="smajor" column="smajor"/>
+		<result property="sintro" column="sintro"/>
+		<result property="status" column="status"/>
+		<result property="stelephone" column="stelephone"/>
+		<result property="sque" column="sque"/>
+		<association property="user" javaType="com.example.designer.pojo.User">
+			<id property="uid" column="uid"/>
+			<result property="tid" column="tid"/>
+			<result property="userid" column="userid"/>
+			<result property="uname" column="uname"/>
+			<result property="upassword" column="upassword"/>
+			<result property="utelephone" column="utelephone"/>
+			<result property="uqq" column="uqq"/>
+			<result property="ubirthday" column="ubirthday"/>
+			<result property="uschool" column="uschool"/>
+			<result property="ustudy" column="ustudy"/>
+			<result property="ugrade" column="ugrade"/>
+			<result property="upic" column="upic"/>
+			<result property="uma" column="uma"/>
+		</association>
+	</resultMap>
+	<select id="selectAllScience" resultMap="selectScience">
+		select * from science s,user u where s.uid=u.uid and s.status=1
+	</select>
+	
+	<resultMap type="com.example.designer.pojo.Team" id="selectTeam">
+		<id property="tid" column="tid"/>
+		<result property="uid" column="uid"/>
+		<result property="mid" column="mid"/>
+		<result property="tname" column="tname"/>
+		<result property="tmajor" column="tmajor"/>
+		<result property="tnum" column="tnum"/>
+		<result property="tintro" column="tintro"/>
+		<result property="tdate" column="tdate"/>
+		<result property="tschool" column="tschool"/>
+		<result property="tpic" column="tpic"/>
+		<association property="user" javaType="com.example.designer.pojo.User">
+			<id property="uid" column="uid"/>
+			<result property="tid" column="tid"/>
+			<result property="userid" column="userid"/>
+			<result property="uname" column="uname"/>
+			<result property="upassword" column="upassword"/>
+			<result property="utelephone" column="utelephone"/>
+			<result property="uqq" column="uqq"/>
+			<result property="ubirthday" column="ubirthday"/>
+			<result property="uschool" column="uschool"/>
+			<result property="ustudy" column="ustudy"/>
+			<result property="ugrade" column="ugrade"/>
+			<result property="upic" column="upic"/>
+			<result property="uma" column="uma"/>
+		</association>
+	</resultMap>
+	<select id="selectTheTeam" resultMap="selectTeam">
+		select * from team t,user u where t.uid=u.uid order by t.tid desc limit 0,8
+	</select>
+	
+	<insert id="insertUser" parameterType="com.example.designer.pojo.User">
+		<selectKey keyColumn="uid" keyProperty="uid" order="AFTER" resultType="int">
+			select LAST_INSERT_ID()
+		</selectKey>
+		insert into user(userid,uname,upassword,utelephone,uqq,ubirthday,uschool,ustudy,ugrade,upic) value(#{userid},#{uname},#{upassword},#{utelephone},#{uqq},#{ubirthday},#{uschool},#{ustudy},#{ugrade},#{upic})
+	</insert>
+</mapper>
