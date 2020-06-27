@@ -1,11 +1,11 @@
 package com.example.designer.mapper;
 
-import java.util.ArrayList;
-
 import com.example.designer.pojo.*;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+
+import java.util.ArrayList;
 
 @Mapper
 public interface TeamMapper {
@@ -41,5 +41,8 @@ public interface TeamMapper {
 	public void InsertTeam(Team team);
 	
 	public ArrayList<Science> queryAllScience(int tid);
-	
+
+	@Update("update team set tnum=tnum+1 where tid=#{tid}")
+	public void updatetnum(int tid);
+
 }

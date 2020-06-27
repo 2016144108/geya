@@ -210,6 +210,7 @@ public class TeamController {
 			User user2=teamService.queryTheUser(user.getUid());
 			if(user2.getTid()==0) {
 				teamService.updatetid(user);
+				teamService.updatetnum(user.getTid());
 				result.setCode(200);
 				result.setMsg("加入团队成功");
 				result.setData(user2);

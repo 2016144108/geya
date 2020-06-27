@@ -1,12 +1,11 @@
 package com.example.designer.service;
 
-import java.util.ArrayList;
-
-import javax.annotation.Resource;
-
 import com.example.designer.mapper.TeamMapper;
 import com.example.designer.pojo.*;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.ArrayList;
 
 @Service("teamService")
 public class TeamService {
@@ -70,6 +69,10 @@ public class TeamService {
 	
 	public ArrayList<Science> queryAllScience(int tid){
 		return teamMapper.queryAllScience(tid);
+	}
+
+	public void updatetnum(int tid){
+		teamMapper.updatetnum(tid);
 	}
 		
 }
