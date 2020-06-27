@@ -2,7 +2,7 @@ $(document).ready(function() {
     var uid = getCookie("useridss");
     var sid = getUrlParam("sid");
     $.ajax({
-        url : "../scienceuser?uid="+uid,
+        url : "../teamuser2?uid="+uid,
         dataType : "json",
         async : false,
         success : function(result) {

@@ -7,7 +7,7 @@ $(document).ready(function() {
 			async : false,
 			success : function(result) {
 				if(result.code==200){
-					$("#info").html(+result.data.utelephone);
+					$("#info").html(result.data.uname+result.data.utelephone);
 					$("#text").val(result.data.uname);
 					$(".uid").val(id);
 				}

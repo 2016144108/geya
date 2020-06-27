@@ -695,6 +695,7 @@ public class ScienceController {
 				result.setCode(400);
 				result.setMsg("错误");
 				result.setData(e);
+				System.out.println(e);
 				JSONObject json=JSONObject.fromObject(result);
 				comments=null;
 				return json;

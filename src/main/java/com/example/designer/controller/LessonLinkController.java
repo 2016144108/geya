@@ -1,19 +1,17 @@
 package com.example.designer.controller;
 
-import java.util.ArrayList;
-
-import javax.annotation.Resource;
-
 import com.example.designer.pojo.Lesson;
 import com.example.designer.pojo.LessonLink;
 import com.example.designer.pojo.Result;
 import com.example.designer.service.LessonLinkService;
+import net.sf.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import net.sf.json.JSONObject;
+import javax.annotation.Resource;
+import java.util.ArrayList;
 
 @Controller
 public class LessonLinkController {
@@ -56,6 +54,7 @@ public class LessonLinkController {
 				result.setCode(400);
 				result.setMsg("错误");
 				result.setData(e);
+				System.out.println(e);
 				JSONObject json=JSONObject.fromObject(result);
 				lessonlinks=null;
 				return json;

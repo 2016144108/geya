@@ -1,13 +1,10 @@
 package com.example.designer.mapper;
 
-import java.util.ArrayList;
-
 import com.example.designer.pojo.*;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
+
+import java.util.ArrayList;
 
 @Mapper
 public interface ScienceMapper {
@@ -54,7 +51,7 @@ public interface ScienceMapper {
 
 	public ArrayList<Science> queryMySomeScience(Science science);
 	
-	@Select("select * from team t,user u where t.tid=u.tid and u.uid=${uid}")
+	@Select("select * from team t,user u where t.tid=u.tid and u.uid=#{uid}")
 	public TeamSci queryTheTeam2(int uid);
 	
 	@Select("select * from user u,team t where t.tid=u.tid and u.uid=#{uid}")
